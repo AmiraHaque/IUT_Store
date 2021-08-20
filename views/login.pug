@@ -1,0 +1,56 @@
+head
+    link(rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/loginsignupstyle.css')
+    title LOGIN
+nav.navbar.navbar-default.navbar-fixed-top
+    .container
+        .navbar-header
+            button.navbar-toggle.collapsed(type='button' data-toggle='collapse' data-target='#navbar' aria-expanded='false' aria-controls='navbar')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href='/')
+                span.headleft IUT 
+                span.headright STORE
+        #navbar.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='/') Home
+                li.dropdown
+                    a.dropdown-toggle(data-toggle='dropdown' href='#')
+                        | Categories
+                        span.caret
+                    ul.dropdown-menu
+                      li
+                          a(href='/product/?category=tshirt') T-Shirts
+                      li
+                          a(href='/product/?category=jacket') Jackets
+                      li
+                          a(href='/product/?category=hoodie') Hoodies
+                      li
+                          a(href='/product/?category=others') Others
+                li
+                    a(href='/account') Account
+                li
+                    a(href='/cart') Cart
+
+.simple
+    br
+    .message_error(class='alert alert-danger' role='alert')
+    form.login
+        input.input_field(type='email' name='email' placeholder='Your email')
+        br
+        br
+        input.input_field(type='password' name='pass' placeholder='Your password')
+        br
+        br
+        button#sub(type='submit') Log In
+        p.message
+            | Not Registered?
+            a.message2(href='/signup')  Register
+
+script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js")
+script(src='https://code.jquery.com/jquery-3.3.1.min.js')
+script(type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
+script(src='/js/login.js')
